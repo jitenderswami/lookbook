@@ -27,6 +27,11 @@ const LookEntityView: React.FC<LookEntityViewProps> = ({ entity, handlers, handl
 							Current Media for the look:
 							{activeMedia + 1}
 						</div>
+						{activeMedia === entity.media.length - 1 && (
+							<div className="text-muted mt-[24px]">
+								No more media in this look swipe up for more looks
+							</div>
+						)}
 					</div>
 
 					<div className="w-full p-[24px] absolute bottom-0 z-[100]">
