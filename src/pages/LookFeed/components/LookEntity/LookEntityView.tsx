@@ -20,8 +20,13 @@ const LookEntityView: React.FC<LookEntityViewProps> = ({ entity, handlers, handl
 			>
 				<div className="w-full h-full relative">
 					<div className="w-full p-[24px]">
-						<div className="text-white text-xl font-bold">{entity?.title}</div>
-						<div className="text-white text-lg font-semibold">{entity?.description}</div>
+						<div className="text-white text-xl font-bold">Look title: {entity?.title}</div>
+						<div className="text-white text-lg font-semibold">Description: {entity?.description}</div>
+
+						<div className="text-muted mt-[24px]">
+							Current Media for the look:
+							{activeMedia + 1}
+						</div>
 					</div>
 
 					<div className="w-full p-[24px] absolute bottom-0 z-[100]">
