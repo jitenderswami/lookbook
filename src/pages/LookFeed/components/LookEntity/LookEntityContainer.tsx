@@ -10,7 +10,7 @@ interface LookEntityContainerProps {
 	onSwipeUp: () => void;
 	onSwipeDown: () => void;
 }
-const intervalDuration = 5000;
+const intervalDuration = 10000;
 const LookEntityContainer: React.FC<LookEntityContainerProps> = ({ entity, onSwipeUp, onSwipeDown }) => {
 	const navigate = useNavigate();
 
@@ -26,7 +26,7 @@ const LookEntityContainer: React.FC<LookEntityContainerProps> = ({ entity, onSwi
 				}
 
 				if (action === "decrement" && prev > 0) {
-					updatedVal += 1;
+					updatedVal -= 1;
 				}
 
 				return updatedVal;
